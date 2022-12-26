@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{detail.img.url}}" width="300" height="300" >
+        </div>
+
+<div class="col-md-6">
+    <h1>{{detail.name}}</h1>
+    <h6>{{detail.place}}</h6>
+    <h4>{{detail.price}}</h4>
+    <a class="btn btn-warning" href="{% url 'hotelapp:update' detail.id %}">Update</a>
+    <a class="btn btn-warning" href="{% url 'hotelapp:delete' detail.id %}">Delete</a>
+</div>
+    </div>
+</div>
+
+{% endblock %}
